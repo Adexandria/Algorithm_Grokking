@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DistinctCharacters("cbbebi", 3));
+            Console.WriteLine(DistinctCharacters("araaci", 2));
           
 
         }
@@ -26,10 +26,7 @@ namespace ConsoleApp1
                     windowStart++;
                     windowSum = s[windowStart].ToString();
                 }
-                if (windowSum.Length > maxLength)
-                {
-                        maxLength = windowSum.Length;
-                }      
+                maxLength = Math.Max(maxLength, windowSum.Length);     
             }
             return maxLength;
 
